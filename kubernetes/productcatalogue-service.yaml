@@ -32,8 +32,6 @@ spec:
       containers:
       - name: productcatalogue
         image: ruth99/productcatalogue:latest
-      imagePullSecrets:
-      - name: sample-docker
         ports:
         - containerPort: 8020
         livenessProbe:
@@ -42,3 +40,5 @@ spec:
             port: 8025
           initialDelaySeconds: 30
           timeoutSeconds: 1
+      imagePullSecrets:
+        - name: sample-docker
