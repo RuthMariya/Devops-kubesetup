@@ -32,6 +32,8 @@ spec:
       containers:
       - name: productcatalogue
         image: ruth99/productcatalogue:latest
+      imagePullSecrets:
+      - name: sample-docker
         ports:
         - containerPort: 8020
         livenessProbe:
