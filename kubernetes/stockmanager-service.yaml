@@ -31,7 +31,9 @@ spec:
     spec:
       containers:
       - name: stockmanager
-        image: praveensingam1994/stockmanager:latest
+        image: ruth99/stockmanager:latest
+      imagePullSecrets:
+      - name: sample-docker
         ports:
         - containerPort: 8030
         livenessProbe:
