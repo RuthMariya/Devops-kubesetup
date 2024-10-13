@@ -32,6 +32,8 @@ spec:
       containers:
       - name: shopfront
         image: ruth99/shopfront:latest
+      imagePullSecrets:
+      - name: sample-docker
         ports:
         - containerPort: 8010
         livenessProbe:
